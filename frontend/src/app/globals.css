@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+  
+  /* Elite High-Contrast Dark Theme */
+  --color-gov-bg: #0a0a0a;
+  --color-gov-surface: #171717;
+  --color-gov-surface-hover: #262626;
+  --color-gov-border: #262626;
+  --color-gov-accent: #ffffff;
+  --color-gov-accent-hover: #e5e5e5;
+  --color-gov-text: #f5f5f5;
+  --color-gov-muted: #a3a3a3;
+}
+
+body {
+  background-color: var(--color-gov-bg);
+  color: var(--color-gov-text);
+  min-height: 100vh;
+  /* Removed soft gradients for a flat, dense look */
+}
+
+/* Sharp panel utility replacing glassmorphism */
+.elite-panel {
+  background-color: var(--color-gov-surface);
+  border: 1px solid var(--color-gov-border);
+  box-shadow: none;
+}
+
+/* Custom scrollbar - minimalistic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-gov-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gov-border);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gov-muted);
+}
